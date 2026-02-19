@@ -13,39 +13,79 @@
 
   </head>
 
-<body class="min-h-screen flex justify-center items-center bg-gray-100">
+<body class="min-h-screen flex justify-center items-center bg-gray-100 p-6">
 
-    <main class="w-[90%] max-w-7xl grid grid-cols-3 gap-4">
+    <main class="w-[90%] max-w-4xl grid grid-cols-3 grid-rows-3 gap-4 auto-rows-fr">
 
-        <section class="bg-white p-4 border" role="region" aria-label="Time">
-          <time class="time">
+        <!-- Clock — large featured tile: col 1–2, row 1–2 -->
+        <section
+          class="col-span-2 row-span-2 bg-gray-900 text-white rounded-2xl p-8 flex flex-col justify-center shadow-lg"
+          role="region"
+          aria-label="Time"
+        >
+          <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-2">Current Time</p>
+          <time class="time text-6xl font-bold tabular-nums leading-none">
             <span class="hours">HH</span>:<span class="minutes">MM</span>:<span class="seconds">SS</span>
-            <span class="amOrPm">AM/PM</span>
+            <span class="amOrPm text-2xl font-medium text-gray-400 ml-2">AM/PM</span>
           </time>
         </section>
 
-        <section class="bg-white p-4 border" role="region" aria-label="Date">
-          <time class="date">
-            <span class="month">January</span>
-            <span class="dayOfMonth">29</span>,
-            <span class="year">2024</span> —
-            <span class="dayOfWeek">Monday</span>
+        <!-- Date — col 3, row 1 -->
+        <section
+          class="col-start-3 row-start-1 bg-indigo-50 rounded-2xl p-6 flex flex-col justify-between shadow"
+          role="region"
+          aria-label="Date"
+        >
+          <p class="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-2">Today</p>
+          <time class="date text-indigo-900">
+            <span class="block text-2xl font-bold leading-tight">
+              <span class="month">January</span> <span class="dayOfMonth">29</span>
+            </span>
+            <span class="block text-sm text-indigo-500 mt-1">
+              <span class="year">2024</span> · <span class="dayOfWeek">Monday</span>
+            </span>
           </time>
         </section>
 
-        <section class="bg-white p-4 border" role="region" aria-label="Days until event">
-          <p>Days until event: <time class="daysUntilEvent">000</time></p>
+        <!-- Streak — col 3, row 2 -->
+        <section
+          class="col-start-3 row-start-2 bg-amber-50 rounded-2xl p-6 flex flex-col justify-between shadow"
+          role="region"
+          aria-label="Streak"
+        >
+          <p class="text-xs font-semibold uppercase tracking-widest text-amber-500 mb-2">Streak</p>
+          <p class="text-4xl font-bold text-amber-900">
+            <time class="streakOfDays">000</time>
+            <span class="text-base font-medium text-amber-500 ml-1">days</span>
+          </p>
         </section>
 
-        <section class="bg-white p-4 border" role="region" aria-label="Streak">
-          <p>Streak: <time class="streakOfDays">000</time></p>
+        <!-- Days Until Event — col 1, row 3 -->
+        <section
+          class="col-start-1 row-start-3 bg-emerald-50 rounded-2xl p-6 flex flex-col justify-between shadow"
+          role="region"
+          aria-label="Days until event"
+        >
+          <p class="text-xs font-semibold uppercase tracking-widest text-emerald-500 mb-2">Days Until Event</p>
+          <p class="text-4xl font-bold text-emerald-900">
+            <time class="daysUntilEvent">000</time>
+          </p>
         </section>
 
-        <section class="bg-white p-4 border" role="region" aria-label="Age">
-          <p>Age: <time class="ageOfPerson">000</time></p>
+        <!-- Age — col 2–3, row 3 -->
+        <section
+          class="col-span-2 col-start-2 row-start-3 bg-rose-50 rounded-2xl p-6 flex flex-col justify-between shadow"
+          role="region"
+          aria-label="Age"
+        >
+          <p class="text-xs font-semibold uppercase tracking-widest text-rose-400 mb-2">Age</p>
+          <p class="text-4xl font-bold text-rose-900">
+            <time class="ageOfPerson">000</time>
+            <span class="text-base font-medium text-rose-400 ml-1">years</span>
+          </p>
         </section>
 
     </main>
-    
+
   </body>
 </html>
